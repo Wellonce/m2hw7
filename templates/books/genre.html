@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %} Genres {% endblock %}
+{% block content %}
+    <div class="py-4">
+        <h3>Genres</h3>
+    </div>
+    {% for genre in genres %}
+        <div class="row mb-3">
+            <div class="col-2">
+                <p>{{ genre.name }}</p> 
+            </div>
+        </div>
+    {% empty %}
+        <h3>No Genres</h3>
+    {% endfor %}
+
+{% endblock %}
